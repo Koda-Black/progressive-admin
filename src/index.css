@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #ff6b6b;
+  --color-background: #000000;
+  --color-sunset-orange: #fe9a00;
+  --color-steel-blue: #90a1b9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", system-ui, sans-serif;
+  background-color: var(--color-background);
+  color: #ffffff;
+}
+
+@layer components {
+  .card {
+    @apply bg-[#121212] rounded-2xl border border-white/5;
+  }
+
+  .btn-primary {
+    @apply bg-[#FF6B6B] text-white font-semibold py-3 px-6 rounded-lg 
+           transition-all duration-300 hover:bg-[#FF5252] 
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply bg-white/5 text-white font-medium py-2 px-4 rounded-lg 
+           transition-all duration-200 hover:bg-white/10;
+  }
+
+  .input-field {
+    @apply w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 
+           text-white placeholder-white/40 focus:outline-none focus:border-[#FF6B6B] 
+           transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply badge bg-[#FF6B6B]/20 text-[#FF6B6B];
+  }
+}
