@@ -3,7 +3,6 @@ import {
   RefreshCw,
   ChevronDown,
   Check,
-  Clock,
   ChefHat,
   Truck,
   X,
@@ -33,30 +32,6 @@ interface Order {
   notes?: string;
   createdAt: string;
 }
-
-const statusOptions = [
-  { value: "pending", label: "Pending", icon: Clock, color: "text-yellow-500" },
-  {
-    value: "confirmed",
-    label: "Confirmed",
-    icon: Check,
-    color: "text-blue-500",
-  },
-  {
-    value: "preparing",
-    label: "Preparing",
-    icon: ChefHat,
-    color: "text-sunsetOrange",
-  },
-  { value: "ready", label: "Ready", icon: Truck, color: "text-green-500" },
-  {
-    value: "delivered",
-    label: "Delivered",
-    icon: Check,
-    color: "text-steelBlue",
-  },
-  { value: "cancelled", label: "Cancelled", icon: X, color: "text-red-500" },
-];
 
 export default function OrdersPage() {
   const [orders, setOrders] = useState<Order[]>([]);
